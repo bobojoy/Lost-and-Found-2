@@ -16,6 +16,7 @@ const Signup = () => {
       headers: {
         "Content-Type": "application/json",
       },
+      
       body: JSON.stringify({ username, email, password }),
     }).then((r) => {
       if (r.ok) {
