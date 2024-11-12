@@ -7,3 +7,28 @@ import Rewards from './Components/Rewards';
 import SignIn from './Components/SignIn';
 // import Signup from './Components/Signup';
 //import Login from './Components/Login';
+
+const routes = [
+	{
+		path: '/',
+		element: <Home />,
+	},
+	{
+		path: '/Lost Items',
+		element: <LostItems />,
+	},
+	{
+		path: '/Found Items',
+		element: <FoundItems />,
+	},
+	{
+		path: '/Rewards',
+		element: <Rewards />,
+	},
+
+	{
+		path: '/signIn',
+		element: <SignIn />,
+	},
+	
+];
