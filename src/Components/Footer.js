@@ -21,7 +21,7 @@ export default function Footer() {
                     <div className="col-lg-3 col-md-6">
                         <div className="footer-link">
                             <h2>Popular Links</h2>
-                            <a href="/about">About Us</a>
+                           
                             <a href="/contact">Contact Us</a>
                     
                         </div>
