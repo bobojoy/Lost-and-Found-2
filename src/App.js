@@ -1,17 +1,17 @@
-import React from 'react'
-import Home from './Components/Home'
+// import React from 'react'
+// import Home from './Components/Home'
 
 
 
-const App = () => {
-  return (
-    <div>
-      <Home/>
+// const App = () => {
+//   return (
+//     <div>
+//       <Home/>
     
 
       
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
-export default App
+// export default App
