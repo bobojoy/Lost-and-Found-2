@@ -3,6 +3,7 @@ import React from 'react';
 import Home from './Home';
 import FoundItemList from './FoundItemList';
 import LostItemList  from './LostItemList';
+import Signup from './Signup';
 
 
 const Routes = [
@@ -15,8 +16,12 @@ const Routes = [
 		element: <LostItemList />,
 	},
 	{
-		path: '/foundtitems',
+		path: '/founditems',
 		element: <FoundItemList />,
+	},
+	{
+		path: '/signup',
+		element: <Signup />,
 	},
 	
 	
