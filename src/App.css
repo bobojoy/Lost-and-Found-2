@@ -36,3 +36,83 @@
     transform: rotate(360deg);
   }
 }
+
+/* App.css */
+
+/* Overall body background color */
+body {
+  background-color: #2c3547;  /* Dark background color */
+  color: #ffffff;  /* White text color for contrast */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;  /* Full viewport height */
+}
+
+/* Form container styles */
+.form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;  /* Light background for the form */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title heading styles */
+h2 {
+  color:  #2c3547;  /* Dark heading color */
+  text-align: center;
+}
+
+/* Input group styles */
+.inputGroup {
+  margin-bottom: 15px;
+}
+
+/* Label styling */
+.inputGroup label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #282c34;  /* Dark label color for better readability */
+}
+
+/* Input field styling */
+.inputGroup input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Image upload styling */
+.inputGroup input[type="file"] {
+  padding: 5px;
+  font-size: 14px;
+}
+
+/* Submit button styling */
+.submitButton {
+  padding: 10px 20px;
+  background-color: #ca5612;  /* Button background color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #e47b3d;  /* Lighter hover effect for the button */
+}
+
+.submitButton:active {
+  background-color: #b7510f;  /* Darker active state for button */
+}
