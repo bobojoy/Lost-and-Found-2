@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "./NavBar";
 import "../Home.css";
+import Footer from "./Footer";
 
 const Home = () => {
   return (
@@ -80,7 +81,9 @@ const Home = () => {
             </div>
           </div>
         </main>
+        
       </div>
+      <Footer/>
     </>
   );
 };
