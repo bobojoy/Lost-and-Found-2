@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "./NavBar";
 import "../Home.css";
-import Footer from "./Footer";
+import Footer from "./footer";
 
 const Home = () => {
   return (
@@ -83,7 +83,7 @@ const Home = () => {
         </main>
         
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };
