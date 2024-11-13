@@ -1,22 +1,22 @@
-// src/Components/FoundItemFormComponent.js
 import React, { useState } from "react";
-import "./../App.css"; // Importing the CSS from App.css
+import { useNavigate } from "react-router-dom";
+import "../App.css";
 
-function FoundItemFormComponent() {
-  // State to store form data
+function LostItemFormComponent() {
   const [formData, setFormData] = useState({
     itemName: "",
     itemColor: "",
     itemBrand: "",
-    itemLocationFound: "",
-    itemDateFound: "",
+    itemLocationLost: "",
+    itemDateLost: "",
     contactName: "",
     contactEmail: "",
     contactPhone: "",
     itemImage: null,
   });
 
-  // Handle changes in input fields
+  const navigate = useNavigate();
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -25,7 +25,6 @@ function FoundItemFormComponent() {
     }));
   };
 
-  // Handle image upload
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
     setFormData((prevData) => ({
@@ -34,34 +33,39 @@ function FoundItemFormComponent() {
     }));
   };
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // You can replace this with an API call or further processing
-    console.log("Found item details submitted:", formData);
+    // Simulate form submission (this is where you'd normally send the data to a backend)
+    console.log("Lost item details submitted:", formData);
 
-    // Reset form after submission (optional)
+    // Simulate storing the form data (optional, for demonstration)
+    // You can store this in localStorage or sessionStorage, but in this case we're just logging it
+    localStorage.setItem("lastLostItem", JSON.stringify(formData)); // Optional storage for the lost item
+
+    // Reset form after submission
     setFormData({
       itemName: "",
       itemColor: "",
       itemBrand: "",
-      itemLocationFound: "",
-      itemDateFound: "",
+      itemLocationLost: "",
+      itemDateLost: "",
       contactName: "",
       contactEmail: "",
       contactPhone: "",
       itemImage: null,
     });
+
+    // Redirect back to the LostItemList after submission
+    navigate("/lostitems");
   };
 
   return (
     <form onSubmit={handleSubmit} className="form">
-      <h2>Found Item Report</h2>
+      <h2>Lost Item Report</h2>
 
-      {/* Image Upload */}
       <div className="inputGroup">
-        <label htmlFor="itemImage">Upload Image </label>
+        <label htmlFor="itemImage">Upload Image</label>
         <input
           type="file"
           id="itemImage"
@@ -70,9 +74,8 @@ function FoundItemFormComponent() {
         />
       </div>
 
-      {/* Item Name */}
       <div className="inputGroup">
-        <label htmlFor="itemName">Item Found</label>
+        <label htmlFor="itemName">Item Lost</label>
         <input
           type="text"
           id="itemName"
@@ -84,7 +87,6 @@ function FoundItemFormComponent() {
         />
       </div>
 
-      {/* Item Color */}
       <div className="inputGroup">
         <label htmlFor="itemColor">Item Color</label>
         <input
@@ -98,7 +100,6 @@ function FoundItemFormComponent() {
         />
       </div>
 
-      {/* Item Brand */}
       <div className="inputGroup">
         <label htmlFor="itemBrand">Item Brand</label>
         <input
@@ -112,34 +113,31 @@ function FoundItemFormComponent() {
         />
       </div>
 
-      {/* Location Found */}
       <div className="inputGroup">
-        <label htmlFor="itemLocationFound">Location Found</label>
+        <label htmlFor="itemLocationLost">Location Lost</label>
         <input
           type="text"
-          id="itemLocationFound"
-          name="itemLocationFound"
-          value={formData.itemLocationFound}
+          id="itemLocationLost"
+          name="itemLocationLost"
+          value={formData.itemLocationLost}
           onChange={handleChange}
-          placeholder="Enter where the item was found"
+          placeholder="Enter where the item was lost"
           required
         />
       </div>
 
-      {/* Date Found */}
       <div className="inputGroup">
-        <label htmlFor="itemDateFound">Date Found</label>
+        <label htmlFor="itemDateLost">Date Lost</label>
         <input
           type="date"
-          id="itemDateFound"
-          name="itemDateFound"
-          value={formData.itemDateFound}
+          id="itemDateLost"
+          name="itemDateLost"
+          value={formData.itemDateLost}
           onChange={handleChange}
           required
         />
       </div>
 
-      {/* Contact Information */}
       <div className="inputGroup">
         <label htmlFor="contactName">Your Name</label>
         <input
@@ -179,12 +177,11 @@ function FoundItemFormComponent() {
         />
       </div>
 
-      {/* Submit Button */}
       <button type="submit" className="submitButton">
-        Submit Found Item
+        Submit Lost Item
       </button>
     </form>
   );
 }
 
-export default FoundItemFormComponent;
+export default LostItemFormComponent;
