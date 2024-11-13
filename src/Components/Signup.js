@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 // import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
-import "../App.css"; // Assuming you're using global styles from App.css
+import "../App.css"; 
 
 const Signup = () => {
   const [username, setUsername] = useState('');
@@ -16,7 +16,6 @@ const Signup = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      
       body: JSON.stringify({ username, email, password }),
     }).then((r) => {
       if (r.ok) {
