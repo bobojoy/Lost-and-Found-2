@@ -21,7 +21,7 @@ const Signup = () => {
       if (r.ok) {
         r.json().then(() => {
           alert("Sign Up successful");
-          navigate('/login'); // Redirect to login page after successful sign up
+          // navigate('/login'); // Redirect to login page after successful sign up
         });
       } else {
         r.json().then((err) => setError(err.error)); // Display error if sign up fails
@@ -62,8 +62,8 @@ const Signup = () => {
 
         {/* Buttons */}
         <button type="submit" id="signup-submit-button">Sign up</button>
-        <button type="button" onClick={() => navigate('/login')} id="login-link-button">Log in</button>
-        <button type="button" onClick={() => navigate('/')} id="back-button">X</button>
+        {/* <button type="button" onClick={() => navigate('/login')} id="login-link-button">Log in</button> */}
+        {/* <button type="button" onClick={() => navigate('/')} id="back-button">X</button> */}
 
         {/* Error Message */}
         {error && <p className="error-message">{error}</p>}

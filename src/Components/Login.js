@@ -20,7 +20,7 @@ function Login() {
       if (r.ok) {
         r.json().then(() => {
           setTimeout(() => {
-            navigate('/');
+            // navigate('/');
           }, 1000);
         });
       } else {
@@ -54,10 +54,10 @@ function Login() {
 
      
         <button type="submit" id="login-login-button">Log in</button>
-        <button type="button" onClick={() => navigate('/signup')} id="signup-button">Sign up</button>
+        {/* <button type="button" onClick={() => navigate('/signup')} id="signup-button">Sign up</button> */}
 
 		
-        <button type="button" onClick={() => navigate('/')} id="back-button">Back</button>
+        {/* <button type="button" onClick={() => navigate('/')} id="back-button">Back</button> */}
 
        
         {error && <p className="error-message">{error}</p>}

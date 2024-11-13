@@ -37,187 +37,202 @@
   }
 }
 
-/* App.css */
+/* General Body Styles */
 body {
-  background-color: #111; /* Dark background */
-  color: white; /* White text for better contrast */
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fc;
   margin: 0;
   padding: 0;
 }
 
-/* Login Form Container */
+/* Center the Signup Form on the Page */
+#signup-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f7fc;
+}
+
+#signup-form {
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+#signup-form h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Input Styles */
+.signup-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.signup-input:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+.signup-input::placeholder {
+  color: #888;
+}
+
+/* Submit Button Styles */
+#signup-submit-button {
+  background-color: #007BFF;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+#signup-submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Error Message Styles */
+.error-message {
+  color: #d9534f;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  #signup-form {
+    padding: 20px;
+    width: 90%;
+  }
+
+  #signup-form h1 {
+    font-size: 20px;
+  }
+
+  .signup-input {
+    padding: 10px;
+  }
+
+  #signup-submit-button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+ /* General Body Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fc;
+  margin: 0;
+  padding: 0;
+}
+
+/* Center the Login Form on the Page */
 #login-form-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Full viewport height */
-  background-color: #222; /* Slightly lighter black background */
+  height: 100vh;
+  background-color: #f4f7fc;
 }
 
 #login-form {
-  background-color: #333; /* Darker background for form */
-  padding: 20px;
+  background-color: white;
+  padding: 30px 40px;
   border-radius: 8px;
-  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
   text-align: center;
 }
 
 #login-form h1 {
-  color: #ff6600; /* Orange header color */
+  font-size: 24px;
   margin-bottom: 20px;
+  color: #333;
 }
 
+/* Input Styles */
 .login-input {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin-bottom: 15px;
-  border: 2px solid #ff6600; /* Orange border */
-  background-color: #444; /* Dark background for input */
-  color: white;
+  border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
 }
 
 .login-input:focus {
-  border-color: #ffcc00; /* Lighter orange on focus */
+  border-color: #007BFF;
   outline: none;
 }
 
-button {
-  width: 100%;
-  padding: 12px;
-  margin-top: 10px;
-  font-size: 16px;
-  cursor: pointer;
+.login-input::placeholder {
+  color: #888;
+}
+
+/* Button Styles */
+#login-login-button, #signup-button, #back-button {
+  background-color: #007BFF;
+  color: white;
+  padding: 12px 20px;
   border: none;
   border-radius: 4px;
-  transition: background-color 0.3s ease;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+  margin-bottom: 10px;
 }
 
-#login-login-button {
-  background-color: #ff6600; /* Orange background */
-  color: white;
+#login-login-button:hover, #signup-button:hover, #back-button:hover {
+  background-color: #0056b3;
 }
 
-#login-login-button:hover {
-  background-color: #ffcc00; /* Lighter orange on hover */
-}
-
-#signup-button {
-  background-color: #007bff; /* Blue background */
-  color: white;
-}
-
-#signup-button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-}
-
-#back-button {
-  background-color: #000; /* Black background for "Back" button */
-  color: white;
-}
-
-#back-button:hover {
-  background-color: #444; /* Darker black for hover effect */
-}
-
+/* Error Message Styles */
 .error-message {
-  color: red;
+  color: #d9534f;
   font-size: 14px;
   margin-top: 10px;
   text-align: center;
 }
 
-/* App.css */
-body {
-	background-color: #111; /* Dark background for the page */
-	color: white; /* White text for better contrast */
-	font-family: Arial, sans-serif;
-	margin: 0;
-	padding: 0;
+/* Responsive Design */
+@media (max-width: 480px) {
+  #login-form {
+    padding: 20px;
+    width: 90%;
   }
-  
-  /* Signup Form Container */
-  #signup-form-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh; /* Full viewport height */
-	background-color: #222; /* Slightly lighter black background */
+
+  #login-form h1 {
+    font-size: 20px;
   }
-  
-  #signup-form {
-	background-color: #333; /* Darker background for the form */
-	padding: 20px;
-	border-radius: 8px;
-	width: 300px;
-	text-align: center;
+
+  .login-input {
+    padding: 10px;
   }
-  
-  #signup-form h1 {
-	color: #ff6600; /* Orange header */
-	margin-bottom: 20px;
+
+  #login-login-button, #signup-button, #back-button {
+    font-size: 14px;
+    padding: 10px;
   }
-  
-  .signup-input {
-	width: 100%;
-	padding: 10px;
-	margin-bottom: 15px;
-	border: 2px solid #ff6600; /* Orange border for the inputs */
-	background-color: #444; /* Dark background for input fields */
-	color: white;
-	border-radius: 4px;
-	font-size: 14px;
-  }
-  
-  .signup-input:focus {
-	border-color: #ffcc00; /* Lighter orange on focus */
-	outline: none;
-  }
-  
-  button {
-	width: 100%;
-	padding: 12px;
-	margin-top: 10px;
-	font-size: 16px;
-	cursor: pointer;
-	border: none;
-	border-radius: 4px;
-	transition: background-color 0.3s ease;
-  }
-  
-  #signup-submit-button {
-	background-color: #ff6600; /* Orange background for sign up button */
-	color: white;
-  }
-  
-  #signup-submit-button:hover {
-	background-color: #ffcc00; /* Lighter yellow on hover */
-  }
-  
-  #login-link-button {
-	background-color: #007bff; /* Blue background for login link button */
-	color: white;
-  }
-  
-  #login-link-button:hover {
-	background-color: #0056b3; /* Darker blue on hover */
-  }
-  
-  #back-button {
-	background-color: #000; /* Black background for back button */
-	color: white;
-  }
-  
-  #back-button:hover {
-	background-color: #444; /* Darker black for hover effect */
-  }
-  
-  .error-message {
-	color: red;
-	font-size: 14px;
-	margin-top: 10px;
-	text-align: center;
-  }
-  
+}
