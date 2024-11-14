@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; 
-import "../App.css"; 
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "../App.css";
 
 const Signup = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
   const [error, setError] = useState(null);
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,13 +22,13 @@ const Signup = () => {
         if (r.ok) {
           r.json().then(() => {
             alert("Sign Up successful");
-            navigate('/login'); 
+            navigate("/login");
           });
         } else {
-          r.json().then((err) => setError(err.error || "Signup failed")); 
+          r.json().then((err) => setError(err.error || "Signup failed"));
         }
       })
-      .catch((err) => setError("An unexpected error occurred")); 
+      .catch((err) => setError("An unexpected error occurred"));
   };
 
   return (
@@ -36,7 +36,6 @@ const Signup = () => {
       <form onSubmit={handleSubmit} id="signup-form">
         <h1>Sign up</h1>
 
-        
         <input
           type="text"
           value={username}
@@ -62,12 +61,20 @@ const Signup = () => {
           aria-label="Password"
         />
 
-        
-        <button type="submit" id="signup-submit-button">Sign up</button>
-        <button type="button" onClick={() => navigate('/login')} id="login-link-button">Log in</button>
-        <button type="button" onClick={() => navigate('/')} id="back-button">X</button>
+        <button type="submit" id="signup-submit-button">
+          Sign up
+        </button>
+        <button
+          type="button"
+          onClick={() => navigate("/login")}
+          id="login-link-button"
+        >
+          Log in
+        </button>
+        <button type="button" onClick={() => navigate("/")} id="back-button">
+          X
+        </button>
 
-        
         {error && <p className="error-message">{error}</p>}
       </form>
     </div>
@@ -75,4 +82,3 @@ const Signup = () => {
 };
 
 export default Signup;
-
