@@ -1,8 +1,9 @@
 import { CiLogout } from "react-icons/ci";
 import { LiaTimesSolid } from "react-icons/lia";
-import '../LogOut.css';
+// import '../LogOut.css';
 
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function LogOut({showlogOut, setshowlogout}) {
 
@@ -19,7 +20,7 @@ function LogOut({showlogOut, setshowlogout}) {
             </div>
             <div>
                 <button>CANCEL</button>
-                <button>LOG OUT</button>
+                <button><Link to='/successfullogout'>LOG OUT</Link></button>
             </div>
             
         </div>
