@@ -36,7 +36,7 @@ const Signup = () => {
       <form onSubmit={handleSubmit} id="signup-form">
         <h1>Sign up</h1>
 
-        {/* Input Fields */}
+        
         <input
           type="text"
           value={username}
@@ -62,12 +62,12 @@ const Signup = () => {
           aria-label="Password"
         />
 
-        {/* Buttons */}
+        
         <button type="submit" id="signup-submit-button">Sign up</button>
         <button type="button" onClick={() => navigate('/login')} id="login-link-button">Log in</button>
         <button type="button" onClick={() => navigate('/')} id="back-button">X</button>
 
-        {/* Error Message */}
+        
         {error && <p className="error-message">{error}</p>}
       </form>
     </div>
