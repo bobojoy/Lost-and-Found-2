@@ -37,13 +37,11 @@ function FoundItemFormComponent() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Simulate form submission (logging to console)
+   
     console.log("Found item details submitted:", formData);
+   
+    localStorage.setItem("lastFoundItem", JSON.stringify(formData)); 
 
-    // Simulate storing the form data (optional, for demonstration)
-    localStorage.setItem("lastFoundItem", JSON.stringify(formData)); // Optional storage
-
-    // Reset form after submission
     setFormData({
       itemName: "",
       itemColor: "",
@@ -56,7 +54,7 @@ function FoundItemFormComponent() {
       itemImage: null,
     });
 
-    // Redirect back to the FoundItemList after submission
+
     navigate("/founditems");
   };
 

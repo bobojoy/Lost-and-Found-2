@@ -1,15 +1,15 @@
 // src/Components/FoundItemList.js
 import React, { useEffect, useState } from "react";
-import FoundItemCard from "./FoundItemCard"; // Assuming you have a FoundItemCard component
+import FoundItemCard from "./FoundItemCard";
 import NavBar from "./NavBar";
-import { Link } from "react-router-dom"; // For linking to the found item form
+import { Link } from "react-router-dom"; 
 import "../App.css";
 
 const FoundItemList = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/items") // Your API to fetch found items
+    fetch("http://localhost:3000/items") 
       .then((res) => res.json())
       .then((data) => setItems(data))
       .catch((error) => console.error("Error fetching data:", error));
@@ -22,7 +22,7 @@ const FoundItemList = () => {
       </header>
 
       <main className="listcard">
-        {/* Button to navigate to the Found Item Form */}
+        {}
         <div className="report-button-container">
           <Link to="/report-found-item">
             <button className="report-found-item-button">
@@ -31,7 +31,7 @@ const FoundItemList = () => {
           </Link>
         </div>
 
-        {/* Display the list of found items */}
+        {}
         {items.map((item) => (
           <FoundItemCard key={item.id} item={item} />
         ))}

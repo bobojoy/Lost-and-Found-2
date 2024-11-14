@@ -1,13 +1,12 @@
 // src/Components/FoundItemDetailsPage.js
 
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom"; // Access the passed state from the location
+import { useLocation } from "react-router-dom"; 
 import "../App.css";
 
 const FoundItemDetailsPage = () => {
-  const location = useLocation(); // Get the location object
-  const { item } = location.state; // Get the item passed through the state
-
+  const location = useLocation(); 
+  const { item } = location.state; 
   if (!item) {
     return <p>Item not found</p>;
   }
