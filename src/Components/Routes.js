@@ -1,10 +1,10 @@
 import React from "react";
-
 import Home from "./Home";
 import FoundItemList from "./FoundItemList";
 import LostItemList from "./LostItemList";
+import LostItemDetailsPage from "./LostItemDetailsPage"; // Import the new details page
 import Signup from "./Signup";
-import LostItemFormComponent from "./LostItemFormComponent"; // Import the Lost Item Form Component
+import LostItemFormComponent from "./LostItemFormComponent";
 import FoundItemFormComponent from "./FoundItemFormComponent";
 
 const Routes = [
@@ -31,6 +31,10 @@ const Routes = [
   {
     path: "/report-found-item", // New route for reporting a found item
     element: <FoundItemFormComponent />, // Form for submitting found items
+  },
+  {
+    path: "/lostitem/:id", // New route for individual lost item details
+    element: <LostItemDetailsPage />, // This will display the full details of the lost item
   },
 ];
 

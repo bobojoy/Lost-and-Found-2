@@ -31,9 +31,11 @@ const LostItemList = () => {
         </div>
 
         {/* Display the list of lost items */}
-        {items.map((des) => (
-          <LostItemCard key={des.id} item={des} />
-        ))}
+        <div className="item-cards">
+          {items.map((item) => (
+            <LostItemCard key={item.id} item={item} />
+          ))}
+        </div>
       </main>
     </div>
   );
