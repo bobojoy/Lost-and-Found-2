@@ -1,5 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import LogOut from './Components/logout';
+import SuccessfulLogout from './Components/successfulLogin';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 
 function App() {
   return (
@@ -17,7 +21,14 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+        </header>
+      
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LogOut />} />
+        <Route path="/successfullogout" element={<SuccessfulLogout />} />
+      </Routes>
+    </BrowserRouter>
     </div>
   );
 }
