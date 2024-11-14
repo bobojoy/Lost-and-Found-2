@@ -2,6 +2,7 @@ import React from "react";
 import Home from "./Home";
 import FoundItemList from "./FoundItemList";
 import LostItemList from "./LostItemList";
+import FoundItemDetailsPage from "./FoundItemDetailsPage";
 import LostItemDetailsPage from "./LostItemDetailsPage"; // Import the new details page
 import Signup from "./Signup";
 import LostItemFormComponent from "./LostItemFormComponent";
@@ -35,6 +36,10 @@ const Routes = [
   {
     path: "/lostitem/:id", // New route for individual lost item details
     element: <LostItemDetailsPage />, // This will display the full details of the lost item
+  },
+  {
+    path: "/founditem/:id", // Add the route for Found Item Details
+    element: <FoundItemDetailsPage />, // Display the Found Item Details Page
   },
 ];
 
