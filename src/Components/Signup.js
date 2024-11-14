@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
 import "../App.css"; 
 
 const Signup = () => {
@@ -7,8 +6,7 @@ const Signup = () => {
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
   const [error, setError] = useState(null);
-  // const navigate = useNavigate(); // Declare useNavigate hook for navigation
-
+ 
   const handleSubmit = (e) => {
     e.preventDefault();
     fetch("/signup", {
@@ -21,10 +19,10 @@ const Signup = () => {
       if (r.ok) {
         r.json().then(() => {
           alert("Sign Up successful");
-          // navigate('/login'); // Redirect to login page after successful sign up
+         
         });
       } else {
-        r.json().then((err) => setError(err.error)); // Display error if sign up fails
+        r.json().then((err) => setError(err.error)); 
       }
     });
   };
@@ -34,7 +32,7 @@ const Signup = () => {
       <form onSubmit={handleSubmit} id="signup-form">
         <h1>Sign up</h1>
 
-        {/* Input Fields */}
+        {}
         <input
           type="text"
           value={username}
@@ -60,12 +58,10 @@ const Signup = () => {
           aria-label="Password"
         />
 
-        {/* Buttons */}
+        {}
         <button type="submit" id="signup-submit-button">Sign up</button>
-        {/* <button type="button" onClick={() => navigate('/login')} id="login-link-button">Log in</button> */}
-        {/* <button type="button" onClick={() => navigate('/')} id="back-button">X</button> */}
-
-        {/* Error Message */}
+       
+        {}
         {error && <p className="error-message">{error}</p>}
       </form>
     </div>

@@ -30,8 +30,6 @@ const LostItemList = () => {
             </button>
           </Link>
         </div>
-
-       
         {items.map((item) => (
           <LostItemCard key={item.id} item={item} />
         ))}

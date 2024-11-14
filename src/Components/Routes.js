@@ -3,7 +3,7 @@ import Home from "./Home";
 import FoundItemList from "./FoundItemList";
 import LostItemList from "./LostItemList";
 import FoundItemDetailsPage from "./FoundItemDetailsPage";
-import LostItemDetailsPage from "./LostItemDetailsPage"; // Import the new details page
+import LostItemDetailsPage from "./LostItemDetailsPage"; 
 import Signup from "./Signup";
 import LostItemFormComponent from "./LostItemFormComponent";
 import FoundItemFormComponent from "./FoundItemFormComponent";
@@ -26,20 +26,20 @@ const Routes = [
     element: <Signup />,
   },
   {
-    path: "/report-lost-item", // New route for reporting a lost item
-    element: <LostItemFormComponent />, // The form for submitting a lost item
+    path: "/report-lost-item", 
+    element: <LostItemFormComponent />, 
   },
   {
-    path: "/report-found-item", // New route for reporting a found item
-    element: <FoundItemFormComponent />, // Form for submitting found items
+    path: "/report-found-item",
+    element: <FoundItemFormComponent />,
   },
   {
-    path: "/lostitem/:id", // New route for individual lost item details
-    element: <LostItemDetailsPage />, // This will display the full details of the lost item
+    path: "/lostitem/:id", 
+    element: <LostItemDetailsPage />, 
   },
   {
-    path: "/founditem/:id", // Add the route for Found Item Details
-    element: <FoundItemDetailsPage />, // Display the Found Item Details Page
+    path: "/founditem/:id", 
+    element: <FoundItemDetailsPage />, 
   },
 ];
 

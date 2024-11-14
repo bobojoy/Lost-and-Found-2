@@ -36,14 +36,10 @@ function LostItemFormComponent() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Simulate form submission (this is where you'd normally send the data to a backend)
     console.log("Lost item details submitted:", formData);
 
-    // Simulate storing the form data (optional, for demonstration)
-    // You can store this in localStorage or sessionStorage, but in this case we're just logging it
-    localStorage.setItem("lastLostItem", JSON.stringify(formData)); // Optional storage for the lost item
+    localStorage.setItem("lastLostItem", JSON.stringify(formData)); 
 
-    // Reset form after submission
     setFormData({
       itemName: "",
       itemColor: "",
@@ -56,7 +52,6 @@ function LostItemFormComponent() {
       itemImage: null,
     });
 
-    // Redirect back to the LostItemList after submission
     navigate("/lostitems");
   };
 

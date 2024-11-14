@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom"; // Import useParams to access URL params
+import { useParams } from "react-router-dom"; 
 import "../App.css";
 
 const LostItemDetailsPage = () => {
-  const { id } = useParams(); // Get the item ID from the URL
+  const { id } = useParams();
   const [item, setItem] = useState(null);
 
   useEffect(() => {
-    // Fetch the item details based on the ID from the URL
+   
     fetch(`http://localhost:3000/lost-items/${id}`)
       .then((res) => res.json())
       .then((data) => setItem(data))
       .catch((error) => console.error("Error fetching item details:", error));
-  }, [id]); // Fetch data again if the ID changes
+  }, [id]); 
 
   if (!item) {
-    return <p>Loading...</p>; // Show a loading message until the item data is fetched
+    return <p>Loading...</p>;
   }
 
   return (

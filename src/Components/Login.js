@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
 import "../App.css";
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
-//   const navigate = useNavigate();
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,7 +19,6 @@ function Login() {
       if (r.ok) {
         r.json().then(() => {
           setTimeout(() => {
-            // navigate('/');
           }, 1000);
         });
       } else {
@@ -54,13 +52,9 @@ function Login() {
 
      
         <button type="submit" id="login-login-button">Log in</button>
-        {/* <button type="button" onClick={() => navigate('/signup')} id="signup-button">Sign up</button> */}
-
-		
-        {/* <button type="button" onClick={() => navigate('/')} id="back-button">Back</button> */}
+       
 
        
-        {error && <p className="error-message">{error}</p>}
       </form>
     </div>
   );
