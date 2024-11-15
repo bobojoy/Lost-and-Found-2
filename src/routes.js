@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Login from "./components/Login";
-import Signup from "./components/Signup";
+import Login from "./Components/Login";
+import Signup from "./Components/Signup";
 // import Home from "./components/Home";
 // import ReportedLostItems from "./components/ReportedLostItems";
 // import FoundItems from "./components/FoundItems";
