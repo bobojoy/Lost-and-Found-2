@@ -1,18 +1,18 @@
-import React from "react";
-import { BrowserRouter as Router } from "react-router-dom"; // Import BrowserRouter
-import RoutesConfig from "./Routes"; // Import RoutesConfig to handle routing
-import Navbar from "./Components/NavBar"; // Import Navbar if you want it to appear globally
+// import React from "react";
+// import { BrowserRouter as Router } from "react-router-dom"; 
+// import RoutesConfig from "./Routes"; 
+// import Navbar from "./Components/NavBar"; 
 
-function App() {
-  return (
-    <Router>
-      {/* Wrap your app in BrowserRouter */}
-      <div>
-        <Navbar /> {/* Include the Navbar component */}
-        <RoutesConfig /> {/* Include RoutesConfig to display the routes */}
-      </div>
-    </Router>
-  );
-}
+// function App() {
+//   return (
+//     <Router>
+//       {}
+//       <div>
+//         <Navbar /> {}
+//         <RoutesConfig /> {}
+//       </div>
+//     </Router>
+//   );
+// }
 
-export default App;
+// export default App;
