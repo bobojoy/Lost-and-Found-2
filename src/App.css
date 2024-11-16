@@ -1,137 +1,60 @@
+/* App.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #4CAF50;
+  font-size: 3rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.welcome-message {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: #333;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.button-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
-/* logout */
-.logout{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 3px solid grey;
-  padding: 10px;
-  width: 20%;
-  background: rgb(205, 216, 223);
-  margin: 50px auto;
   gap: 20px;
 }
-.logout div{
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.logout div h1{
-  color: blue;
-}
-.logout div button{
-  padding: 10px 25px;
-  cursor: pointer;
+
+.admin-button, .member-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  font-size: 18px;
   border: none;
-  font-weight: bold;
-}
-.logout div button a{
-  color: white;
-}
-.logout div button:nth-child(1){
-  color: blue;
-}
-.logout div button:nth-child(2){
-  color: white;
-  background: blue;
-}
-.logout .logout-div1{
-  position: relative;
-}
-.div1-icon{
-  position: absolute;
-  top: -20px;
-  right: -80px;
-  font-size: 22px;
   cursor: pointer;
-  font-weight: bold;
-}
-.logout div .icon{
-  font-size: 22px;
-  color: blue;
-  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
 }
 
-/* succeful logout */
-.suceesful-logout{
-  display: flex;
-  flex-direction: column;
-  gap:30px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
-  width: 20%;
-  padding: 10px;
-  margin: 50px auto;
+.admin-button:hover, .member-button:hover {
+  background-color: #45a049;
 }
-.suceesful-logout div:nth-child(1){
-  font-size: 55px;
-  height: 60px;
-  width: 60px;
-  border: 1px solid green;
-  margin: auto auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  color: green;
-  position: relative;
+
+.admin-button {
+  background-color: #4CAF50;
 }
-.suceesful-logout div:nth-child(1)::after{
-  content: "";
-  position: absolute;
-  width: 100px;
-  height: 1px;
-  background: green;
-  left: -170%;
-  top: 50%;
+
+.member-button {
+  background-color: #007BFF;
 }
-.suceesful-logout div:nth-child(1)::before{
-  content: "";
-  position: absolute;
-  width: 100px;
-  height: 1px;
-  background: green;
-  right: -170%;
-  top: 50%;
-}
-.suceesful-logout div:nth-child(2){
-  font-weight: bold;
+
+.member-button:hover {
+  background-color: #0056b3;
 }
