@@ -1,0 +1,62 @@
+/* src/Admin/Components/AdminHomePage.css */
+
+/* Basic layout for the Admin Home Page */
+.admin-home-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading and general content styling */
+.admin-home-container h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #343a40;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.admin-home-container p {
+  font-size: 1.1rem;
+  color: #495057;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Add a footer at the bottom */
+.admin-home-footer {
+  margin-top: 40px;
+  padding: 15px;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+.admin-home-footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.admin-home-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .admin-home-container {
+    padding: 15px;
+  }
+
+  .admin-home-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .admin-home-container p {
+    font-size: 1rem;
+  }
+}

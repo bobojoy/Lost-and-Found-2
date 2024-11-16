@@ -1,4 +1,4 @@
-/* App.css */
+/* src/App.css */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -56,5 +56,37 @@ h1 {
 }
 
 .member-button:hover {
+  background-color: #0056b3;
+}
+
+.form-container {
+  margin-top: 20px;
+}
+
+form input {
+  padding: 10px;
+  margin: 10px 0;
+  width: 200px;
+}
+
+form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+form button[type="button"] {
+  background-color: #007BFF;
+}
+
+form button[type="button"]:hover {
   background-color: #0056b3;
 }
