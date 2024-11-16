@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"; 
-import "../App.css";
+import "./App.css";
 
 const LostItemDetailsPage = () => {
   const { id } = useParams();

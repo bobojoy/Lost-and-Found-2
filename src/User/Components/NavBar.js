@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "../App.css";
+import "./App.css";
 
 function NavBar() {
   return (
@@ -34,6 +34,11 @@ function NavBar() {
             <NavLink to="/signup">
               <li>
                 <a href="#">Sign Up</a>
+              </li>
+            </NavLink>
+            <NavLink to="/logout">
+              <li>
+                <a href="#">LogOut</a>
               </li>
             </NavLink>
           </ul>

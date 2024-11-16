@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import LostItemCard from "./LostItemCard"; 
 import NavBar from "./NavBar";
 import { Link } from "react-router-dom"; 
-import "../App.css";
+import "./App.css";
 
 const LostItemList = () => {
   const [items, setItems] = useState([]);

@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom"; 
-import "../App.css";
+import "./App.css";
 
 const FoundItemDetailsPage = () => {
   const location = useLocation(); 
