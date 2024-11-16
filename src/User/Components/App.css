@@ -235,99 +235,181 @@ body {
     font-size: 14px;
   }
 }
-.logout{
+/* src/User/Components/LogOut.css */
+.logout-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  border: 3px solid grey;
-  padding: 10px;
-  width: 20%;
-  background: rgb(205, 216, 223);
-  margin: 50px auto;
-  gap: 20px;
-}
-.logout div{
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.logout div h1{
-  color: blue;
-}
-.logout div button{
-  padding: 10px 25px;
-  cursor: pointer;
-  border: none;
-  font-weight: bold;
-}
-.logout div button a{
-  color: white;
-}
-.logout div button:nth-child(1){
-  color: blue;
-}
-.logout div button:nth-child(2){
-  color: white;
-  background: blue;
-}
-.logout .logout-div1{
-  position: relative;
-}
-.div1-icon{
-  position: absolute;
-  top: -20px;
-  right: -80px;
-  font-size: 22px;
-  cursor: pointer;
-  font-weight: bold;
-}
-.logout div .icon{
-  font-size: 22px;
-  color: blue;
-  cursor: pointer;
-}
-/* succeful logout */
-.suceesful-logout{
-  display: flex;
-  flex-direction: column;
-  gap:30px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
-  width: 20%;
-  padding: 10px;
-  margin: 50px auto;
-}
-.suceesful-logout div:nth-child(1){
-  font-size: 55px;
-  height: 60px;
-  width: 60px;
-  border: 1px solid green;
-  margin: auto auto;
-  display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  color: green;
-  position: relative;
-}
-.suceesful-logout div:nth-child(1)::after{
-  content: "";
-  position: absolute;
-  width: 100px;
-  height: 1px;
-  background: green;
-  left: -170%;
-  top: 50%;
-}
-.suceesful-logout div:nth-child(1)::before{
-  content: "";
-  position: absolute;
-  width: 100px;
-  height: 1px;
-  background: green;
-  right: -170%;
-  top: 50%;
-}
-.suceesful-logout div:nth-child(2){
-  font-weight: bold;
+  height: 100vh;
+  background-color: #f7f7f7;
 }
 
+.logout-container h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.logout-buttons {
+  display: flex;
+  gap: 20px; /* Space between the buttons */
+}
+
+.logout-button, .cancel-button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button {
+  background-color: #ff4f58;
+  color: white;
+  border: none;
+}
+
+.logout-button:hover {
+  background-color: #e04350;
+}
+
+.cancel-button {
+  background-color: #6c757d; /* Gray color for Cancel button */
+  color: white;
+  border: none;
+}
+
+.cancel-button:hover {
+  background-color: #5a6268;
+}
+
+/* src/User/Components/SuccessfulLogout.css */
+.successful-logout-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.successful-logout-container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #28a745; /* Green color for success */
+}
+
+.successful-logout-container button {
+  padding: 12px 25px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.successful-logout-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Login & Signup Form Containers */
+#login-form-container, #signup-form-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Error Message Styling */
+.error-message {
+  color: #ff4f58;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+/* Specific Input Styling */
+.signup-input,
+.login-input {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.signup-input:focus,
+.login-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Button Styling for Submit */
+#login-login-button,
+#signup-submit-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#login-login-button:hover,
+#signup-submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  #login-form-container,
+  #signup-form-container {
+    padding: 20px;
+    width: 90%;
+  }
+}

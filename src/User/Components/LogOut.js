@@ -1,41 +1,33 @@
+// src/User/Components/LogOut.js
 import React from "react";
-import { CiLogout } from "react-icons/ci"; // Correct import for CiLogout icon
-import { LiaTimesSolid } from "react-icons/lia"; // Correct import for LiaTimesSolid icon
 import { useNavigate } from "react-router-dom";
+import "./App.css"; // Import the CSS file
 
-function LogOut({ showLogOut, setShowLogout }) {
+const LogOut = () => {
   const navigate = useNavigate();
 
-  // Handle logout
   const handleLogout = () => {
-    // Clear authentication data (assuming token is stored in localStorage)
-    localStorage.removeItem("authToken"); // Adjust based on your implementation
-    setShowLogout(false);
-    navigate("/login"); // Redirect to login page after logout
+    // Perform logout (e.g., clear localStorage, session, etc.)
+    navigate("/successfullogout"); // Navigate to the successful logout page
+  };
+
+  const handleCancel = () => {
+    navigate("/"); // Redirect to the home page when Cancel is clicked
   };
 
   return (
-    <div className={`${showLogOut ? "active_logout" : "logout-container"}`}>
-      <div className="logout">
-        <div className="logout-div1">
-          <h1>Log out</h1>
-          <p onClick={() => setShowLogout(false)} className="div1-icon">
-            <LiaTimesSolid /> {/* This icon will be rendered here */}
-          </p>
-        </div>
-        <div>
-          <p className="icon">
-            <CiLogout /> {/* This icon will be rendered here */}
-          </p>
-          <p className="logout-p">Do you want to log out?</p>
-        </div>
-        <div>
-          <button onClick={() => setShowLogout(false)}>CANCEL</button>
-          <button onClick={handleLogout}>LOG OUT</button>
-        </div>
+    <div className="logout-container">
+      <h1>Are you sure you want to log out?</h1>
+      <div className="logout-buttons">
+        <button onClick={handleLogout} className="logout-button">
+          Logout
+        </button>
+        <button onClick={handleCancel} className="cancel-button">
+          Cancel
+        </button>
       </div>
     </div>
   );
-}
+};
 
 export default LogOut;

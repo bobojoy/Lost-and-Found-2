@@ -4,14 +4,15 @@ import Home from "./Home";
 import FoundItemList from "./FoundItemList";
 import LostItemList from "./LostItemList";
 import FoundItemDetailsPage from "./FoundItemDetailsPage";
-import LostItemDetailsPage from "./LostItemDetailsPage"; 
-import Signup from "./Signup";
+import LostItemDetailsPage from "./LostItemDetailsPage";
+import Signup from "./SignUp";
 import LostItemFormComponent from "./LostItemFormComponent";
 import FoundItemFormComponent from "./FoundItemFormComponent";
 import LogOut from "./LogOut";
-import SuccessfulLogout from "./SuccessfullLogOut";
-import ParentComponent from "./ParentComponent";
+import SuccessfullLogOut from "./SuccessfullLogOut";
+import LogIn from "./LogIn";
 
+// Define your routes here and use createBrowserRouter
 const Routes = [
   {
     path: "/",
@@ -30,16 +31,16 @@ const Routes = [
     element: <Signup />,
   },
   {
+    path: "/login",
+    element: <LogIn />,
+  },
+  {
     path: "/logout",
     element: <LogOut />,
   },
   {
     path: "/successfullogout",
-    element: <SuccessfulLogout />,
-  },
-  {
-    path: "/parentcomponent",
-    element: <ParentComponent/>,
+    element: <SuccessfullLogOut />,
   },
   {
     path: "/report-lost-item",

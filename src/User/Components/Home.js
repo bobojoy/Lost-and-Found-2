@@ -1,9 +1,13 @@
+// src/User/Components/Home.js
 import React from "react";
 import NavBar from "./NavBar";
 import "./Home.css";
 import Footer from "./Footer";
 
 const Home = () => {
+  
+ 
+
   return (
     <>
       <div className="home">
@@ -33,14 +37,14 @@ const Home = () => {
 
                 <p id="para1">
                   At Moringa Lost and Found, we make it easier to reconnect with
-                  whats been lost. Whether you have misplaced something important
-                  or found an item that needs to be returned, our
+                  whats been lost. Whether you have misplaced something
+                  important or found an item that needs to be returned, our
                   community-driven platform helps you track it down. We provide
                   a simple, secure space to post lost and found items, search
-                  for belongings, assist others in returning what they have found,
-                  and offer rewards for those who help reunite lost items with
-                  their rightful owners. Our mission is to make the process of
-                  reuniting lost items quick, stress-free, and rewarding,
+                  for belongings, assist others in returning what they have
+                  found, and offer rewards for those who help reunite lost items
+                  with their rightful owners. Our mission is to make the process
+                  of reuniting lost items quick, stress-free, and rewarding,
                   helping bring peace of mind to everyone involved.
                 </p>
               </div>
@@ -76,6 +80,8 @@ const Home = () => {
                   owners quickly and fairly.
                 </p>
               </div>
+
+              
             </div>
           </div>
         </main>
