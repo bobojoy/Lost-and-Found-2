@@ -2,7 +2,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import Routes from "./User/Components/Routes"; // Updated path
+import Routes from "./Member/Components/Routes"; // Updated path
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 
