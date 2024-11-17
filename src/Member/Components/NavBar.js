@@ -46,6 +46,12 @@ function NavBar() {
                 <a href="#">LogOut</a>
               </li>
             </NavLink>
+            <NavLink to="/admin">
+              <li>
+                <a href="#">Admin</a>
+              </li>
+            </NavLink>
+            
           </ul>
         </header>
       </nav>
