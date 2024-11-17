@@ -1,14 +1,20 @@
-// src/Components/FoundItemDetailsPage.js
-
-import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import React from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./App2.css";
 
 const FoundItemDetailsPage = () => {
   const location = useLocation();
-  const { item } = location.state;
+  const navigate = useNavigate();
+  const { item } = location.state || {}; // Default to empty object to avoid errors
+
+  // Check if item data is missing
   if (!item) {
-    return <p>Item not found</p>;
+    return (
+      <div>
+        <p>Item not found.</p>
+        <button onClick={() => navigate("/")}>Go Back</button>
+      </div>
+    );
   }
 
   return (

@@ -2,19 +2,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
-import { RouterProvider, createBrowserRouter } from "react-router-dom"; // Import RouterProvider and createBrowserRouter
-import routes from "./appRoutes"; // Import routes from appRoutes.js
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+// Import the routes from appRoutes.js
+import routes from "./appRoutes"; // Import the routes array
 
-// Create the router using createBrowserRouter
+// Create the router using createBrowserRouter with the routes from appRoutes.js
 const router = createBrowserRouter(routes);
 
-root.render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router}>
-      <App /> {/* Your App component */}
-    </RouterProvider>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );

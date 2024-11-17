@@ -1,7 +1,7 @@
 // src/User/Components/SuccessfulLogout.js
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./App.css"; // Import the CSS file
+import "./App2.css"; // Import the CSS file
 
 const SuccessfullLogOut = () => {
   const navigate = useNavigate();

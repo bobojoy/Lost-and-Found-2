@@ -1,7 +1,6 @@
-// src/Member/Components/ClaimItemFormComponent.js
 import React, { useState } from "react";
 
-const ClaimItemFormComponent = () => {
+const ClaimItemFoundComponent = () => {
   const [claimDetails, setClaimDetails] = useState({
     itemId: "",
     claimantName: "",
@@ -14,34 +13,62 @@ const ClaimItemFormComponent = () => {
     contactName: "",
     contactEmail: "",
     contactPhone: "",
-    itemImage: null, // For handling file input (item image)
+    itemImage: null,
   });
 
-  // Handle input change for all fields
   const handleChange = (e) => {
     const { name, value } = e.target;
     setClaimDetails({ ...claimDetails, [name]: value });
   };
 
-  // Handle file input change for item image
   const handleFileChange = (e) => {
-    const file = e.target.files[0]; // Get the selected file
+    const file = e.target.files[0];
     setClaimDetails({ ...claimDetails, itemImage: file });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Logic for handling form submission
-    // You would send the form data to the backend or save it to local storage
-    console.log("Claim submitted:", claimDetails);
+    if (!claimDetails.itemImage) {
+      alert("Please upload an image of the item.");
+      return;
+    }
 
-    // Example of how you could handle the form data (e.g., send to API)
-    // const formData = new FormData();
-    // formData.append('itemImage', claimDetails.itemImage);
-    // formData.append('claimDetails', JSON.stringify(claimDetails));
-    // Call an API here (e.g., submit form data to the backend)
+    // Prepare form data to send to server
+    const formData = new FormData();
+    formData.append("itemImage", claimDetails.itemImage);
+    formData.append("claimDetails", JSON.stringify(claimDetails));
 
-    alert("Claim submitted successfully!");
+    try {
+      // Simulating an API call (replace with real API)
+      const response = await fetch("/api/submitClaim", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        alert("Claim submitted successfully!");
+        // Reset form on success
+        setClaimDetails({
+          itemId: "",
+          claimantName: "",
+          reasonForClaim: "",
+          itemName: "",
+          itemColor: "",
+          itemBrand: "",
+          itemLocationFound: "",
+          itemDateFound: "",
+          contactName: "",
+          contactEmail: "",
+          contactPhone: "",
+          itemImage: null,
+        });
+      } else {
+        alert("Failed to submit claim.");
+      }
+    } catch (error) {
+      console.error("Error submitting claim:", error);
+      alert("There was an error. Please try again later.");
+    }
   };
 
   return (
@@ -149,7 +176,13 @@ const ClaimItemFormComponent = () => {
         </div>
         <div>
           <label>Upload Item Image:</label>
-          <input type="file" name="itemImage" onChange={handleFileChange} />
+          <input
+            type="file"
+            name="itemImage"
+            onChange={handleFileChange}
+            accept="image/*"
+            required
+          />
         </div>
         <button type="submit">Submit Claim</button>
       </form>
@@ -157,4 +190,4 @@ const ClaimItemFormComponent = () => {
   );
 };
 
-export default ClaimItemFormComponent;
+export default ClaimItemFoundComponent;

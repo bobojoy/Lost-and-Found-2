@@ -3,7 +3,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./App1.css"; // Import the CSS file
 
-const LogOut = () => {
+const AdminLogOut = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -30,4 +30,4 @@ const LogOut = () => {
   );
 };
 
-export default LogOut;
+export default AdminLogOut;
