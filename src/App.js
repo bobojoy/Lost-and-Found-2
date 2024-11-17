@@ -1,36 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
-import LogOut from './Components/logout';
-import SuccessfulLogout from './Components/successfulLogin';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+// src/App.js
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import LostItemsPage from "./Pages/LostItemsPage";
+import FoundItemsPage from "./Pages/FoundItemsPage";
+import ReportLostItemPage from "./Pages/ReportLostItemForm.js";
+import ReportFoundItemPage from "./Pages/ReportFoundItemForm";
+import AdminPage from "./Pages/AdminPage";
+import LostItemDetails from "./Components/LostItemDetails";
+import FoundItemDetails from "./Components/FoundItemDetails";
+import Navbar from "./Components/Navbar"; // Import the Navbar component
 
+import "./Styles/main.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        </header>
-      
-      <BrowserRouter>
+    <Router>
+      {/* Include the Navbar at the top of the page */}
+      <Navbar />
+
+      <h1>Lost and Found</h1>
       <Routes>
-        <Route path="/" element={<LogOut />} />
-        <Route path="/successfullogout" element={<SuccessfulLogout />} />
+        {/* Define a route for the root */}
+        <Route path="/" element={<Navigate to="/lost-items" />} />{" "}
+        {/* Redirect from / to /lost-items */}
+        <Route path="/lost-items" element={<LostItemsPage />} />
+        <Route path="/found-items" element={<FoundItemsPage />} />
+        <Route path="/report-lost" element={<ReportLostItemPage />} />
+        <Route path="/report-found" element={<ReportFoundItemPage />} />
+        <Route path="/admin" element={<AdminPage />} />
+        <Route path="/lost-item-details/:id" element={<LostItemDetails />} />
+        <Route path="/found-item-details/:id" element={<FoundItemDetails />} />
       </Routes>
-    </BrowserRouter>
-    </div>
+    </Router>
   );
-}
+};
 
 export default App;
