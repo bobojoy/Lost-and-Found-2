@@ -1,5 +1,4 @@
 import React from "react";
-import { createBrowserRouter } from "react-router-dom";
 import Home from "./Home";
 import FoundItemList from "./FoundItemList";
 import LostItemList from "./LostItemList";
@@ -11,6 +10,13 @@ import FoundItemFormComponent from "./FoundItemFormComponent";
 import LogOut from "./LogOut";
 import SuccessfullLogOut from "./SuccessfullLogOut";
 import LogIn from "./LogIn";
+import AdminLostItemList from "./AdminLostItemList.js"; 
+import AdminFoundItemList from "./AdminFoundItemList";
+import AdminFoundItemDetailsPage from "./AdminFoundItemDetailsPage";
+import AdminLostItemDetails from "./AdminLostItemDetails";
+
+// Import the Admin component
+import Admin from "./Admin";  // Add this line
 
 // Define your routes here and use createBrowserRouter
 const Routes = [
@@ -26,6 +32,14 @@ const Routes = [
     path: "/founditems",
     element: <FoundItemList />,
   },
+  // {
+  //   path: "/admin lostitems",
+  //   element: <AdminLostItemList />,
+  // },
+  {
+    path: "/adminfounditems",
+    element: <AdminFoundItemList />,
+  },
   {
     path: "/signup",
     element: <Signup />,
@@ -37,6 +51,10 @@ const Routes = [
   {
     path: "/logout",
     element: <LogOut />,
+  },
+  {
+    path: "/admin",
+    element: <Admin />,
   },
   {
     path: "/successfullogout",
@@ -57,6 +75,14 @@ const Routes = [
   {
     path: "/founditem/:id",
     element: <FoundItemDetailsPage />,
+  },
+  {
+    path: "/adminlostitem/:id",
+    element: <AdminLostItemDetails />,
+  },
+  {
+    path: "/adminfounditem/:id",
+    element: <AdminFoundItemDetailsPage />,
   },
 ];
 

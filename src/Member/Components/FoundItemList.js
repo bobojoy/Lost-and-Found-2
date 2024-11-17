@@ -9,7 +9,7 @@ const FoundItemList = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3001/items") 
+    fetch("http://localhost:3000/items") 
       .then((res) => res.json())
       .then((data) => setItems(data))
       .catch((error) => console.error("Error fetching data:", error));
