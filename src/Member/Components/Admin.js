@@ -24,7 +24,7 @@ function Admin() {
 
   return (
     <div className="admin-container">
-      {/* Admin Navigation */}
+      
       <AdminNav />
 
       {/* Main Content */}
