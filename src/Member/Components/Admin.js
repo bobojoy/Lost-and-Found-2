@@ -1,89 +1,63 @@
-// src/User/Components/Home.js
-import React from "react";
-import NavBar from "./NavBar";
-import "./Admin.css";
-import Footer from "./Footer";
+import React, { useState } from 'react';
+import AdminNav from './AdminNav';
+import TabSelector from './TabSelector';
+import SearchBar from './SearchBar';
+import ItemCard from './ItemCard';
+import AddItemModal from './AddItemModal';
+import { useItems } from '../hooks/useItems';
+function Admin() {
+	const { items, handleStatusChange, handleAddItem } = useItems();
+	const [isModalOpen, setIsModalOpen] = useState(false);
+	const [activeTab, setActiveTab] = useState('found');
+	const [searchQuery, setSearchQuery] = useState('');
 
-const Admin = () => {
-  return (
-    <>
-      <div className="home">
-        <header className="header">
-          <NavBar />
-        </header>
+	const filteredItems = items.filter(
+		(item) =>
+			(activeTab === 'pending'
+				? item.status === 'pending'
+				: item.type === activeTab) &&
+			(item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+				item.description.toLowerCase().includes(searchQuery.toLowerCase()))
+	);
 
-        <main>
-          <div className="about_section" id="about">
-            <div className="about_content">
-              <div className="container1">
-                <h2 id="what">Lost & Found Tracking Made Simple</h2>
-                <p id="para1">
-                  “Misplaced your items? No problem! Moringa Lost & Found lets
-                  you report and track lost items with ease.”
-                </p>
-              </div>
+	return (
+		<div className='min-h-screen bg-gray-50'>
+			<AdminNav
+				
+			/>
 
-              <div className="container">
-                <h2 id="what">What We Do?</h2>
+			<main className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
+				<div className='flex flex-col space-y-4'>
+					<TabSelector
+						activeTab={activeTab}
+						onTabChange={setActiveTab}
+					/>
 
-                <img
-                  className="image1"
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSh6om0qMjGENYqqbDhxsBXdnSVFW8vmERsg&s"
-                  alt="tracking image"
-                />
+					<SearchBar
+						value={searchQuery}
+						onChange={setSearchQuery}
+					/>
 
-                <p id="para1">
-                  At Moringa Lost and Found, we make it easier to reconnect with
-                  whats been lost. Whether you have misplaced something
-                  important or found an item that needs to be returned, our
-                  community-driven platform helps you track it down. We provide
-                  a simple, secure space to post lost and found items, search
-                  for belongings, assist others in returning what they have
-                  found, and offer rewards for those who help reunite lost items
-                  with their rightful owners. Our mission is to make the process
-                  of reuniting lost items quick, stress-free, and rewarding,
-                  helping bring peace of mind to everyone involved.
-                </p>
-              </div>
+					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+						{filteredItems.map((item) => (
+							<ItemCard
+								key={item.id}
+								item={item}
+								onStatusChange={handleStatusChange}
+							/>
+						))}
+					</div>
+				</div>
+			</main>
 
-              <h2 id="what">User Guide Overview</h2>
-
-              <img
-                className="image1"
-                src="https://www.lostfoundrewards.com/wp-content/uploads/2020/01/banner-lost-and-found-rewards-process-1280x500-1.jpg"
-                alt="image"
-              />
-
-              <img
-                className="image1"
-                src="https://www.lostfoundrewards.com/wp-content/uploads/2020/01/banner-lost-and-found-rewards-process-finder-1280x500-1.jpg"
-                alt="image"
-              />
-
-              <img
-                className="image1"
-                src="https://www.lostfoundrewards.com/wp-content/uploads/2020/01/banner-lost-and-found-rewards-about-us-1280x500-1.jpg"
-                alt="image"
-              />
-
-              <div className="container">
-                <h3 id="what">Why Us?</h3>
-                <p id="para1">
-                  We simplify the process of recovering lost items by creating a
-                  secure, efficient, and transparent system for reporting,
-                  tracking, and returning belongings. With real-time updates, a
-                  user-friendly interface, and the ability to offer and receive
-                  rewards, we make sure lost items are reunited with their
-                  owners quickly and fairly.
-                </p>
-              </div>
-            </div>
-          </div>
-        </main>
-      </div>
-      <Footer />
-    </>
-  );
-};
+			<AddItemModal
+				isOpen={isModalOpen}
+				onClose={() => setIsModalOpen(false)}
+				onAdd={handleAddItem}
+				type={activeTab}
+			/>
+		</div>
+	);
+}
 
 export default Admin;

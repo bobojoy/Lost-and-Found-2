@@ -4,6 +4,7 @@ import NavBar from "./NavBar";
 import "./Home.css";
 import Footer from "./Footer";
 
+
 const Home = () => {
   
  
@@ -12,6 +13,7 @@ const Home = () => {
     <>
       <div className="home">
         <header className="header">
+         
           <NavBar />
         </header>
 
