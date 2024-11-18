@@ -34,18 +34,13 @@ function Home() {
 							</p>
 						
 						</div>
-						<video
-							id='imagebanner'
-							autoPlay
-							loop
-							muted
+						
+						<img
+							src='https://img.freepik.com/free-photo/about-as-service-contact-information-concept_53876-138509.jpg'
+							alt='Logo'
 							className='form-video'
-						>
-							<source
-								src='/travel.mp4'
-								type='video/mp4'
-							/>
-						</video>
+							id='imagebanner'
+						/>
 					</div>
 					<div
 						class='about_section'
