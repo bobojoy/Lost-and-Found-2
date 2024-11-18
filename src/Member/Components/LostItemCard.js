@@ -1,4 +1,4 @@
-// src/Components/LostItemCard.js
+
 
 import React from "react";
 import { Link } from "react-router-dom";
@@ -7,9 +7,8 @@ import "./App.css";
 const LostItemCard = ({ item }) => {
   return (
     <div className="card" style={{ cursor: "pointer" }}>
-      <Link to={`/founditem/${item.id}`} state={{ item }}>
-        {" "}
-        {}
+      <Link to={`/lostitem/${item.id}`} state={{ item }}>
+        
         <img src={item.imageUrl} alt={item.name} className="card-image" />
         <div className="card-body">
           <h3>{item.name}</h3>

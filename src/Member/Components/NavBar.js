@@ -36,11 +36,7 @@ function NavBar() {
 								<a href='#'>Sign Up</a>
 							</li>
 						</NavLink>
-						<NavLink to='/login'>
-							<li>
-								<a href='#'>Log In</a>
-							</li>
-						</NavLink>
+						
 						<NavLink to='/logout'>
 							<li>
 								<a href='#'>LogOut</a>

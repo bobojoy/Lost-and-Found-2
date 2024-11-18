@@ -8,8 +8,8 @@ const FoundItemCard = ({ item }) => {
   return (
     <div className="card" style={{ cursor: "pointer" }}>
       <Link to={`/founditem/${item.id}`} state={{ item }}>
-        {" "}
-        {}
+       
+        
         <img src={item.imageUrl} alt={item.name} className="card-image" />
         <div className="card-body">
           <h3>{item.name}</h3>

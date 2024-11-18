@@ -15,8 +15,7 @@ import LogIn from "./LogIn";
 import Admin from "./Admin";
 
 
-// Import the Admin component
-  // Add this line
+
 
 // Define your routes here and use createBrowserRouter
 const Routes = [
@@ -67,7 +66,7 @@ const Routes = [
 		element: <LostItemDetailsPage />,
 	},
 	{
-		path: '/founditem',
+		path: '/founditem/:id',
 		element: <FoundItemDetailsPage />,
 	},
 ];
