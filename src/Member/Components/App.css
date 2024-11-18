@@ -76,6 +76,16 @@ header {
 	transition: 0.8s;
 	
   }
+  .logo{
+   
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+}
+.image1{
+  width: 100px;
+  height: 100px;
+}
   
   header .navbar {
 	display: flex;
