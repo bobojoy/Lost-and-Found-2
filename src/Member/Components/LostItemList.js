@@ -1,4 +1,3 @@
-// src/Components/FoundItemList.js
 import React, { useEffect, useState } from "react";
 import LostItemCard from "./LostItemCard"; 
 import NavBar from "./NavBar";
@@ -9,9 +8,12 @@ const LostItemList = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/items") 
+    fetch("/lostitems") 
       .then((res) => res.json())
-      .then((data) => setItems(data))
+      .then((data) => {
+        console.log(data);  // Log the data to check its structure
+        setItems(Array.isArray(data) ? data : []);  // Ensure it's an array
+      })
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
@@ -22,7 +24,6 @@ const LostItemList = () => {
       </header>
 
       <main className="listcard">
-        
         <div className="report-button-container">
           <Link to="/report-lost-item">
             <button className="report-found-item-button">
@@ -30,7 +31,8 @@ const LostItemList = () => {
             </button>
           </Link>
         </div>
-        {items.map((item) => (
+        
+        {Array.isArray(items) && items.map((item) => (
           <LostItemCard key={item.id} item={item} />
         ))}
       </main>
