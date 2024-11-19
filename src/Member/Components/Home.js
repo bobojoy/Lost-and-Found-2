@@ -3,15 +3,19 @@ import React from 'react';
 import NavBar from './NavBar';
 import './Home.css';
 import Footer from './Footer';
+import Slides from "./Slides";
 
 function Home() {
 	return (
 		<>
+		 
+		
 			<div className='home'>
 				<header className='header'>
 					<NavBar />
 				</header>
 				<main>
+				<Slides />
 					<div
 						class='about_section'
 						id='about'
@@ -83,6 +87,10 @@ function Home() {
 							</p>
 						</div>
 					</div>
+					<div
+						class='about_section'
+						id='about'
+					>
 
 					<div class='user_content'>
 						<h2 id='about-p'>User Guide Overview</h2>
@@ -103,6 +111,7 @@ function Home() {
 							src='https://www.lostfoundrewards.com/wp-content/uploads/2020/01/banner-lost-and-found-rewards-about-us-1280x500-1.jpg'
 							alt='image'
 						/>
+					</div>
 					</div>
 
 					
@@ -133,7 +142,7 @@ function Home() {
 							className='form-video'
 						>
 							<source
-								src='/travel.mp4'
+								src='/wallet.mp4'
 								type='video/mp4'
 							/>
 						</video>

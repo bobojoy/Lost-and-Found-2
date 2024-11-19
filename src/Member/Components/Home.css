@@ -1,9 +1,11 @@
 /* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Ga+Maamli&family=Oswald:wght@200..700&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Arial', sans-serif;
+
 }
 
 /* General Layout */
@@ -11,6 +13,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: rgb(43, 42, 70);
 }
 
 
@@ -23,10 +26,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f9f9f9;
+  background-color: #043049;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
   margin-bottom: 40px;
   transition: all 0.3s ease;
+}
+.user_content{
+  background-color: #043049;
+  
 }
 
 
@@ -40,29 +47,33 @@
 .about_section h2 {
   font-size: 3em;
   font-weight: 700;
-  color: #fff;
+  color: #ffffff;
   font-style: italic;
   font-family: "Signika Negative", sans-serif;
 }
 
 .about_content p {
   font-size: 1.4em;
-  color: #7f8c8d;
+  color: #ffffff;
   line-height: 1.6;
   font-family: "Oswald", sans-serif;
   margin: 10px 0;
 }
 
 #about-p {
-  font-size: 2em;
-  font-weight: 1000;
-  color: #34495e;
+  font-size: 2.4em;
+  font-weight: 500px;
+  color: #e6e9f0;
+  font-family: "Anton", sans-serif;
+  text-decoration: underline;
+  
+ 
 }
 
 #para {
   font-size: 1.2em;
   font-style: oblique;
-  color: #7f8c8d;
+  color: #ecf3f3;
 }
 
 #para1 {
@@ -82,14 +93,17 @@
   transform: scale(1.05); /* Slight zoom effect on hover */
 }
 .user_content h2{
-  padding-left: 750px;
+  margin-left: 400px;
+  color: #ecf3f3;
+  font-family: "Oswald", sans-serif;
 }
 .image1 {
   width: 500px;
- 
   height: auto;
-  border-radius: 10px;
-  margin: 40px ;
+  padding: 10px;
+  border-radius: 20px;
+  display: inline;
+ 
 }
 
 .container {
