@@ -51,8 +51,11 @@ body {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	margin-left: 70px;
-	
-  
+}
+.found-items-container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	margin-left: 70px;
 }
 
 .nav {

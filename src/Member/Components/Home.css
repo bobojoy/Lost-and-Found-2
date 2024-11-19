@@ -230,3 +230,28 @@ span {
   width: 50px;
   border-radius: 30px;
 }
+.user_content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Ensures responsive layout */
+  gap: 80px; /* Space between images */
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; 
+}
+
+.image2, .image3, .image4 { /* Applies to all three image classes */
+  max-width: 33%; /* Ensures each image takes up 1/3 of the container */
+  object-fit: cover; /* Optional: ensures images fill the space properly */
+}
+
+
+
+/* @media (max-width: 768px) {
+  .image2, .image3, .image4 {
+    max-width: 190%; /* Stacks the images vertically on smaller screens */
+  
+

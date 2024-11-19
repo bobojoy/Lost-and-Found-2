@@ -1,15 +1,21 @@
 // src/Components/FoundItemDetailsPage.js
-
-import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom"; 
+import React from "react";
+import { useNavigate, useLocation } from "react-router-dom"; // Import useNavigate and useLocation
 import "./App.css";
 
 const FoundItemDetailsPage = () => {
-  const location = useLocation(); 
-  const { item } = location.state; 
+  const navigate = useNavigate(); // Initialize useNavigate hook
+  const location = useLocation();
+  const { item } = location.state || {}; // Get item from location state
+
   if (!item) {
     return <p>Item not found</p>;
   }
+
+  // Handle navigation to claim item form
+  const handleClaimClick = () => {
+    navigate(`/claim-item/${item.id}`, { state: { item } });
+  };
 
   return (
     <div className="item-details">
@@ -37,6 +43,8 @@ const FoundItemDetailsPage = () => {
       <p>
         <strong>Contact Phone:</strong> {item.contactPhone}
       </p>
+
+      <button onClick={handleClaimClick}>Claim</button>
     </div>
   );
 };
