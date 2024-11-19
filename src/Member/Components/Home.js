@@ -3,7 +3,7 @@ import React from 'react';
 import NavBar from './NavBar';
 import './Home.css';
 import Footer from './Footer';
-import Slides from "./Slides";
+
 
 function Home() {
 	return (
@@ -15,7 +15,7 @@ function Home() {
 					<NavBar />
 				</header>
 				<main>
-				<Slides />
+				
 					<div
 						class='about_section'
 						id='about'

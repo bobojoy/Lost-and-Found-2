@@ -10,7 +10,7 @@ const LostItemCard = ({ item }) => {
       <Link to={`/lostitem/${item.id}`} state={{ item }}>
         
         <img src={item.imageUrl} alt={item.name} className="card-image" />
-        <div className="card-body">
+        <div className="body">
           <h3>{item.name}</h3>
           <p>
             <strong>Place Found:</strong> {item.placeFound}
