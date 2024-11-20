@@ -1,16 +1,17 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Homepage from "./Homepage";
-import User from "./User/Components"; 
-import Admin from "./Admin/Components"; 
+import User from "./User/Components";
+import Admin from "./Admin/Components";
+
 const App = () => {
   return (
     <Router>
-      <Switch>
-        <Route exact path="/" component={Homepage} />
-        <Route path="/user" component={User} />
-        <Route path="/admin" component={Admin} />
-      </Switch>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/user" element={<User />} />
+        <Route path="/admin" element={<Admin />} />
+      </Routes>
     </Router>
   );
 };
