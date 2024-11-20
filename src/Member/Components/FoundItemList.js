@@ -11,7 +11,7 @@ const FoundItemList = () => {
 
   // Fetching the items (assuming API returns an array of found items)
   useEffect(() => {
-    fetch("http://localhost:3000/items")
+    fetch("founditems")
       .then((res) => res.json())
       .then((data) => setItems(data))
       .catch((error) => console.error("Error fetching data:", error));
