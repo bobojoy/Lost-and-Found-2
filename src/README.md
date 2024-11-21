@@ -1,4 +1,5 @@
 Moringa Lost & Found
+
 Description
 The Moringa Lost & Found application is a platform where users can report lost and found items. It helps users track lost items, report found items, and manage claims for recovered items. This project uses a Flask API for the backend and React for the frontend.
 
