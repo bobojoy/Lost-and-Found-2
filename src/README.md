@@ -177,7 +177,7 @@ Import the Moringa Lost & Found.postman_collection.json file into Postman to tes
 Running Tests with Pytest
 Run the following command in your terminal to execute the tests:
 
-pytest -x
+pytest 
 
 This will run all the tests and stop at the first failure, providing feedback on your API functionality.
 License
